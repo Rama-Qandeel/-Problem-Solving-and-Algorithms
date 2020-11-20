@@ -6,8 +6,17 @@ console.log('Problem Solving Q: 7');
 Write a function that returns the sum of odd numbers in an array.
 */
 
-function SumOddNumber() {
-  // YOUR CODE HERE
+function SumOddNumber(arr) {
+ if (arr.length===0){
+   return "please enter numbers in array"
+ }
+let sumOdd=0;
+arr.forEach(element => {
+  if(element%2!==0){
+    sumOdd+=element
+  }
+});
+return sumOdd
 }
 
 /* 
