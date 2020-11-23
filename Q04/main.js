@@ -13,8 +13,20 @@ Have the function usernameValidation(str) take the str parameter being passed an
 If the username is valid then your program should return the string true, otherwise return the string false.
 */
 
-function usernameValidation(str) {
-  // YOUR CODE HERE
+const punctuation = /[!"#$%&'()*+,-./:;<=>?@[\]^`{|}~]/g;
+const numbers=/[123456789_]/g;
+function CodelandUsernameValidation(str) {
+  const searchPunctuation=str.search(punctuation)//return -1 if false
+  const searchNumbers=str[0].search(numbers)
+  // console.log(searchNumbers)
+  // console.log(str.length)
+if (searchPunctuation===-1&&searchNumbers===-1 && (str[str.length-1]) !=="_" 
+&& str.length>4 && str.length<25){
+return true
+}
+else{
+  return false
+}
 }
 
 /* 
