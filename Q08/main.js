@@ -5,9 +5,18 @@ console.log('Problem Solving Q: 8');
 /*  
 Write a function that returns the number of unique items in an array.
 */
-
-function uniqueItems() {
+//20min
+function uniqueItems(arr) {
   // YOUR CODE HERE
+  let first=[]
+  arr.forEach(element=>{
+    if (!first.includes(element)){
+      first.push(element)
+    }
+    
+  })
+
+return first.length;
 }
 
 /* 

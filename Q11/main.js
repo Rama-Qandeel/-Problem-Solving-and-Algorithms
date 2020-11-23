@@ -6,8 +6,26 @@ console.log('Problem Solving Q: 11');
 Write a function that returns YES if a number is a power of 2, and NO otherwise.
 */
 
-function isPowerOfTwo() {
+function isPowerOfTwo(num) {
   // YOUR CODE HERE
+ // return v && !(v & (v - 1));
+ //& bitwise operator compares each operand bitwise.
+ //&& logical operator operates on boolean operands.
+ var log_n = Math.log(n)/Math.log(2);
+ // console.log('log_n : ',log_n); 
+ let result=1
+ for(i=1;i<=log_n;i++){
+   result*=2
+ }
+ // console.log('result ',result);
+ 
+ if(result===n)
+ {
+   return true
+ }else
+ {
+   return false
+ }
 }
 
 /* 
