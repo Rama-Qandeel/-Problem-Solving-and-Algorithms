@@ -8,7 +8,6 @@ Write a function that returns the number of occurrences of the most frequent cha
 
 function timesOfMostFreqChar(str) {
 
-
 }
 
 
