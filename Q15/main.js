@@ -8,8 +8,25 @@ Your function should return the common characters in the same order that they ap
 Do not return duplicate characters and ignore whitespace in your returned string.
 */
 
-function commonCharacters() {
-  // YOUR CODE HERE
+function commonCharacters(str1,str2) {
+  let output=""
+  str1=str1.replace(/\s/g,"").split("")
+  console.log(str1);
+  str2=str2.replace(/\s/g,"").split("")
+  console.log(str2);
+  str1.forEach((ele1,i)=>{
+    console.log('ele1',ele1);
+    
+    str2.forEach((ele2,i)=>{
+      console.log('ele2',ele2);
+
+      if(ele1[i]===ele2[i]){
+        console.log('done');
+        
+        return output+=ele1[i]
+      }
+    })
+  })
 }
 
 /* 
