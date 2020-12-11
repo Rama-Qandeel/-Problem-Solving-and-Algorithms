@@ -6,8 +6,15 @@ console.log('Problem Solving Q: 21');
 Given a string, remove any characters that are not unique from the string.
 */
 
-function onlyUnique() {
-  // YOUR CODE HERE
+function onlyUnique(str) {
+let uniqueChar=""
+for(i=0;i<str.length;i++){
+  let char = str[i];  
+  if (str.indexOf(char) == i && str.indexOf(char, i + 1) == -1) {
+    uniqueChar+=char;
+  }
+}
+return uniqueChar
 }
 
 /* 
