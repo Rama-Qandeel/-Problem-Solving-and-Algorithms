@@ -8,16 +8,9 @@ If the array has an even number of elements, return the average of the two middl
 */
 
 function ArrayMiddle(arr) {
-let avgArray=0;
-if(arr.length%2===0){
-  arr.forEach((ele)=>{
-     return avgArray+=ele;
-  })
-  return avgArray/arr.length
-}else{  
-  avgArray=arr[(arr.length/2+0.5)-1]
-  return avgArray;
-}
+let mid=Math.floor(arr.length/2)
+let even=arr.length%2===0
+return (even?((arr[mid]+arr[mid-1])/2):(arr[mid]))
 }
 
 /* 

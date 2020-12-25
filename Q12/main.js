@@ -42,8 +42,12 @@ function reverseEachWord(str) {
 
  function reverseEachWord(str) {
   // YOUR CODE HERE
-  str = str.split("").reverse().join("");
-  return str;
+revStr=""
+  str = str.split(" ")
+str.forEach((ele)=>{
+  revStr+=ele.split("").reverse().join("")+" "
+})
+return revStr
 }
 
 /* 

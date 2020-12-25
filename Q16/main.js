@@ -7,18 +7,24 @@ Find the first item that occurs an even number of times in an array.
 */
 
 function evenOccurrence(array) {
- let evenNumber=[]
- 
- array.forEach((ele)=>{
+let even={}
 
-    if(ele%2===0 && !evenNumber.length){
-
-      return evenNumber.push(ele)
+array.forEach((ele,i)=>{
+    if(even[ele]){
+      even[ele]+=1
+    }else{
+      even[ele]=1
+    }
+  
+})
+for(let char in even){
+  if (even[char]%2===0)
+  {
+    return char
+  }
 }
-    
-  })
 
-  return evenNumber
+
 
 }
 /* 

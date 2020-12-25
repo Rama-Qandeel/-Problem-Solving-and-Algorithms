@@ -21,12 +21,12 @@ function commonCharacters(str1,str2) {
       console.log('ele2',ele2);
 
       if(ele1[i]===ele2[i]){
-        console.log('done');
         
         return output+=ele1[i]
       }
     })
   })
+  return output
 }
 
 /* 

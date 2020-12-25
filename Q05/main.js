@@ -8,7 +8,19 @@ Have the function FindIntersection(strArr) read the array of strings stored in s
 
 function findIntersection(strArr) {
   // YOUR CODE HERE
+  arrinter=[]
+  Arr1=strArr[0].split(",")
+  Arr2=strArr[1].split(",")
+Arr1.forEach((ele=>{
+
+
+  if (Arr2.includes(ele,0)){
   
+
+    return arrinter.push(ele)
+  }
+}))
+  return arrinter
 }
 
 /* 

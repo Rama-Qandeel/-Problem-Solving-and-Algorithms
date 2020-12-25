@@ -8,8 +8,19 @@ console.log('Problem Solving Q: 22');
  ascending order by character.
 */
 
-function characterFrequency() {
-  // YOUR CODE HERE
+function characterFrequency(str) {
+ const output={}
+ const result=[]
+ for(const char of str){
+  output[char]=output[char]+1||1
+ }
+ for(const key in output){
+  let temp=[]
+  temp[0]=key
+  temp[1]=output[key]
+  result.push(temp)
+ }
+ return result
 }
 
 /* 

@@ -8,10 +8,28 @@ possible sum of any n consecutive numbers
 in an array arr of integers (where n ≥ 1).
 */
 
-function largestPossibleSum() {
-  // YOUR CODE HERE
+function largestPossibleSum(arr,n) {
+  let largestSum = Number.NEGATIVE_INFINITY;
+  let currentSum = 0;
+  let currentN = 0;
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    currentSum += num;
+    currentN += 1;
+    if (currentN === n) {
+      if (currentSum > largestSum) {
+        largestSum = currentSum;
+      }
+      i = n - 1;
+      currentN = 0;
+      currentSum = 0;
+    }
 }
-
+if (largestSum === Number.NEGATIVE_INFINITY) {
+  return 0;
+}
+return largestSum;
+}
 /* 
 largestPossibleSum([10, 2, 3, 4, 2, 6, 8], 1) // => 10
 Examples:
