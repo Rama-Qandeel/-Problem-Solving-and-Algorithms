@@ -9,10 +9,15 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-
- n=String(n).split("").reverse().join("")
-
-  return Number(n)
+ return (
+    parseFloat(
+      n
+        .toString()
+        .split('')
+        .reverse()
+        .join('')
+    ) * Math.sign(n)
+  )  
     
 }
 

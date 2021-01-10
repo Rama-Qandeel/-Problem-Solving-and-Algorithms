@@ -13,29 +13,34 @@
 //   buzz
 
 function fizzBuzz(n) {
-for(i=0;i<=n;i++){
-    // console.log('n',i);
-    if(i%3===0 && i%5===0)
+    console.log('n',n);
+    
+
+  for(i=0;i<n;i++){
+ if((i+1)===0){
+  console.log(i+1);
+ }
+  else  if((i+1)%3===0 &&( i+1)%5===0)
   {
       console.log('fizzBuzz');
       
-      return "fizzBuzz"
+    
   }
- else if(i%3===0 )
+ else if((i+1)%3===0 )
   {
     console.log('fizz');
 
-      return "fizz"
+      
   }
-else  if(i%5===0){
+else  if((i+1)%5===0){
     console.log('Buzz');
 
-    return "buzz"
+
   }
   else{
-    console.log(i);
+    console.log(i+1);
 
-      return i
+   
   }
 }
 
