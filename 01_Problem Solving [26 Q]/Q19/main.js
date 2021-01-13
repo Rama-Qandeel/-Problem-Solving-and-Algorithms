@@ -13,7 +13,7 @@ Array.prototype.isPartOf = function (array) {
       return false;
     }
   }
-  return true;
+  return true
 }
 
 /* 
