@@ -7,8 +7,20 @@ Given a properly formatted URL, return the query string data as an array of key-
 If the url does not contain a query string, return undefined
 */
 
-function getQueryString() {
-  // YOUR CODE HERE
+function getQueryString(url) {
+  if (url.indexOf('?') === -1) return;
+  let result = [];
+  // console.log('splite',url
+  // .split(/[&?]/));
+  url
+    .split(/[&?]/)
+    .slice(1)
+    .forEach(str => {
+      let tuple = str.split('=');
+      console.log('tuple',tuple);
+      result.push(tuple);
+    });
+  return result;
 }
 
 
