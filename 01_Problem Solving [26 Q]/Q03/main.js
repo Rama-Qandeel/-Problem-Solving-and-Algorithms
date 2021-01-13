@@ -14,6 +14,7 @@ function firstReverse(str) {
 //   }
 str=str.split("").reverse().join("")
   return str;
+
 }
 
 /* 

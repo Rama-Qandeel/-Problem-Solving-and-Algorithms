@@ -6,8 +6,10 @@ console.log('Problem Solving Q:26 ');
 Write a JavaScript function to copy an array.
 */
 
-function array_Copy() {
-  // YOUR CODE HERE
+function array_Copy(array) {
+//  arrayCopy=[...array]
+
+  return array.slice(0)
 }
 
 /* 
