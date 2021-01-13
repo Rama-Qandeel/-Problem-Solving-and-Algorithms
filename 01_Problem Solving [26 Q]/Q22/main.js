@@ -8,8 +8,21 @@ console.log('Problem Solving Q: 22');
  ascending order by character.
 */
 
-function characterRecurrence() {
-  // YOUR CODE HERE
+function characterRecurrence(str) {
+let result=[]
+let obj={}
+str.split("").forEach(element => {
+  if(obj[element]){
+    obj[element]+=1
+  }else{
+    obj[element]=1
+  }
+})
+for(const char in obj){
+  result.push([char,obj[char]])
+}
+
+return result
 }
 
 /* 
