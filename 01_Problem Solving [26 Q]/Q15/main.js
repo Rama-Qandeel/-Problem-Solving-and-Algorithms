@@ -8,8 +8,14 @@ Your function should return the common characters in the same order that they ap
 Do not return duplicate characters and ignore whitespace in your returned string.
 */
 
-function jointCharacters() {
-  // YOUR CODE HERE
+function jointCharacters(str1,str2) {
+  let result = '';
+  for (let ch of string1) {
+    if (string2.includes(ch) && !result.includes(ch) && ch !== ' ') {
+      result += ch;
+    }
+  }
+  return result;
 }
 
 /* 
