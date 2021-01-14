@@ -3,13 +3,34 @@ console.log('Problem Solving Q: 13');
 /* find Highest Possible Sum */
 
 /*  
-Write a function that calculates the Highest possible sum of any n consecutive numbers in an array arr of integers (where n ≥ 1).
+Write a function that calculates the Highest 
+possible sum of any n consecutive numbers in an array arr of integers (where n ≥ 1).
 */
 
-function findHighestPossibleSum() {
-  // YOUR CODE HERE
+function findHighestPossibleSum(array,number) {
+  let largestSum = Number.NEGATIVE_INFINITY;
+  let sum=0
+  let index=0
+ for(i=0;i<array.length;i++){
+  // console.log('i',i);
+  sum+=array[i]
+index+=1
+if (index === number) {
+  if (sum > largestSum) {
+    largestSum = sum;
+  }
+ 
+  index=0
+  sum=0
+  i-= number - 1;
 }
+// console.log('sum',sum);
+// console.log('index',index);
+// console.log('largestSum',largestSum);
+}
+return largestSum;
 
+}
 /* 
 findHighestPossibleSum([10, 2, 3, 4, 2, 6, 8], 1) // => 10
 Examples:
