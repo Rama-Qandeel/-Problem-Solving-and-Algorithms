@@ -10,8 +10,26 @@ Bubble sort is considered the most basic sorting algorithm . It works by startin
   • Once it gets to the end of the array, it starts over and repeats the process until the array is sorted numerically.
 */
 
-function findBubbleSort() {
-  // YOUR CODE HERE
+function findBubbleSort(array) {
+  // for (let i = 0; i < array.length - 1; i++) {
+  //   if (array[i] > array[i + 1]) {
+  //     [array[i], array[i + 1]] = [array[i + 1], array[i]];
+     
+  //   }
+  // }
+  // return array;
+  let swapped;
+  do {
+    swapped = false;
+    for (let i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+        // swap the elements using es6 array destructuring
+        [array[i], array[i + 1]] = [array[i + 1], array[i]];
+        swapped = true;
+      }
+    }
+  } while (swapped);
+  return array;
 }
 
 /* 
